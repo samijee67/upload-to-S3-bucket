@@ -3,7 +3,7 @@ title: Upload files to a AWS S3 bucket
 description: Upload pictures, PDF, documents... to an amazon S3 bucket
 ogtitle: Upload files to a AWS S3 bucket
 ogdescription: Upload pictures, PDF, documents... to an amazon S3 bucket
-ogimage: https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-10-at-6.26.31-PM.png
+ogimage: https://fmp-module-images.s3.eu-west-3.amazonaws.com/aws-s3-bucket.png
 ---
 
 This module allows you to store files in an Amazon S3 bucket. <br/>
