@@ -3,7 +3,11 @@ import { getS3Url } from "../services/s3.service";
 
 export const uploadFile = async (file): Promise<string> => {
     let type = file.type;
-    const { url } = await getS3Url(type);
+    const res = await getS3Url(type);
+    
+    if (res.statusCode !== 200) return null;
+    
+    const url = res.data.url;
 
     const headersContent = {
         "Content-Type": file.type,
