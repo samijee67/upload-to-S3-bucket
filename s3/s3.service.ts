@@ -23,7 +23,7 @@ export class S3Service {
             Key: `pictures/${uuid.v4()}.${fileExtension}`,
             ContentType: 'application/octet-stream',
             ACL: 'public-read',
-            Expires: 300
+            Expires: 604800
         });
         return url;
     }
