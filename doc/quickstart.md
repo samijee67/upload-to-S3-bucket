@@ -9,11 +9,11 @@ Create your S3 bucket [here](https://docs.aws.amazon.com/AmazonS3/latest/user-gu
 -  Get te <i>Key ID</i> and the <i>Key secret</i><br/>
 
 ### Step 3
-- Add all permissions to your user<br/>
+- Add all permissions to your user (or at least `AmazonS3FullAccess`)<br/>
 - IAM > Create autorisation > S3<br/>
 
 ### Step 4 
-Add the cors policy in s3 > autorisations<br/>
+Add the CORS policy in s3 > autorisations<br/>
 <pre>
 [
     {
@@ -38,6 +38,7 @@ Add following code in `./backend/src/environments/environment.[dev|staging|prod]
 s3: {
         url: "https://[bucket].s3.eu-west-3.amazonaws.com/userUploads",
         bucket: "[bucket]",
+        region: "[region]",
         host: "s3.eu-west-3.amazonaws.com",
         accessKeyId: "XXXXXXXXXXXXXXXXXX",
         secretAccessKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
@@ -52,7 +53,7 @@ s3: {
 Add the s3 folder (see download code) in your `./backend/src/api`
 
 ### Step 8
-Add the S3 Module in your `app.module.ts`
+Add the `S3Module` in import section in your `app.module.ts`
 
 ### Step 9
 Add `s3.utils.ts` in your `./frontend/src/utils`

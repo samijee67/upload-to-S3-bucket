@@ -5,9 +5,9 @@ export const uploadFile = async (file): Promise<string> => {
     let type = file.type;
     const res = await getS3Url(type);
     
-    if (res.statusCode !== 200) return null;
+    if (!res.url) return null;
     
-    const url = res.data.url;
+    const url = res.url;
 
     const headersContent = {
         "Content-Type": file.type,
