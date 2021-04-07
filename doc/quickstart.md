@@ -32,7 +32,10 @@ Add the CORS policy in s3 > autorisations<br/>
 ]
 </pre>
 
-### Step 5 
+### Step 5
+Authorize public access to your s3 bucket
+
+### Step 6
 Add following code in `./backend/src/environments/environment.[dev|staging|prod]`:<br/>
 <pre>
 s3: {
@@ -45,29 +48,29 @@ s3: {
     }
 </pre>
 
-### Step 6 
+### Step 7
 `cd backend`<br/>
 `npm install aws-sdk@2.799.0`<br/>
 
-### Step 7
+### Step 8
 Add the s3 folder (see download code) in your `./backend/src/api`
 
-### Step 8
+### Step 9
 Add the `S3Module` in import section in your `app.module.ts`
 
-### Step 9
+### Step 10
 Add `s3.utils.ts` in your `./frontend/src/utils`
 
-### Step 10
+### Step 11
 Add `s3.service.ts` in your `./frontend/src/services`
 
-### Step 11
+### Step 12
 Add `example.screen.ts` in your `./frontend/src/pages`<br/>
 Add the page in `page.navigation.tsx`:<br/>
 ```
 <Route exact path="/example" component={ExampleScreen} />
 ```
 
-### Step 12
+### Step 13
 Launch the project with `docker-compose up -V --build`<br/>
 That's it ! :rocket:
